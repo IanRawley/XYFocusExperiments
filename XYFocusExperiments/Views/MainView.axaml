@@ -1,0 +1,117 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:XYFocusExperiments.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="XYFocusExperiments.Views.MainView"
+             x:DataType="vm:MainViewModel"
+			 XYFocus.NavigationModes="Enabled"
+			 XYFocus.UpNavigationStrategy="Projection"
+			 XYFocus.LeftNavigationStrategy="Projection"
+			 XYFocus.RightNavigationStrategy="Projection"
+			 XYFocus.DownNavigationStrategy="Projection"
+			 >
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+  <SplitView DisplayMode="CompactOverlay" IsPaneOpen="True" OpenPaneLength="400">
+	  <SplitView.Pane>
+		  <RelativePanel>
+			  <Button Content="HOME" RelativePanel.AlignRightWithPanel="True"
+									  RelativePanel.AlignTopWithPanel="True" Margin="5"
+									
+									  x:Name="HomeButton"/>
+			  <Button Content="BACK" RelativePanel.AlignRightWithPanel="True"
+					  RelativePanel.Below="HomeButton" Margin="5,5,5,5"
+					   x:Name="BackButton" IsEnabled="False"
+								/>
+			  <Button Content="MENU" RelativePanel.AlignRightWithPanel="True"
+					  RelativePanel.Below="BackButton" Margin="5,5,5,5" x:Name="MenuButton"
+					
+								/>
+
+			  <Button Content="SAVE"
+					  Margin="5" x:Name="SaveButton"
+					  RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="MenuButton"
+								/>
+
+			  <Button Content="UNDO" IsEnabled="False"
+					  Margin="5" x:Name="UndoButton"
+					  RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="SaveButton"
+								/>
+			  <Button Content="REDO" IsEnabled="False"
+					  Margin="5" x:Name="RedoButton"
+					  RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="UndoButton"
+								/>
+
+			  <Button Content="TD Data"  Margin="5"
+					  RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignTopWithPanel="True"
+					  x:Name="DataTreeButton"
+					
+					  HotKey="Ctrl+Shift+D"
+					
+								/>
+			  <Button Content="TD Templates"  Margin="5" IsEnabled="False"
+					  RelativePanel.AlignLeftWithPanel="True" RelativePanel.Below="DataTreeButton"
+					  x:Name="TemplateTreeButton"
+					
+					  HotKey="Ctrl+Shift+T"
+					
+								/>
+			  <Button Content="TD Domains"  Margin="5" IsEnabled="False"
+					  RelativePanel.AlignLeftWithPanel="True" RelativePanel.Below="TemplateTreeButton"
+					  x:Name="DomainsTreeButton"
+					
+					  HotKey="Ctrl+Shift+P"
+					
+								/>
+			  <Button Content="TD Settings"  Margin="5"
+					  RelativePanel.AlignLeftWithPanel="True" RelativePanel.Below="DomainsTreeButton"
+					
+					  x:Name="SettingsButton"
+					  HotKey="Ctrl+Shift+S"
+					
+								/>
+
+
+			  <ToggleSwitch
+							x:Name="FieldModeToggle"
+							RelativePanel.AlignLeftWithPanel="True" Margin="5"
+							RelativePanel.AlignBottomWithPanel="True"
+						  
+							OnContent="TD Field Mode"
+							OffContent="TD Design Mode"
+								  />
+			  <Button Content="TD View Permissions"
+					
+					  RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True"
+					  RelativePanel.RightOf="FieldModeToggle"
+					
+					  Margin="5"
+					
+								/>
+
+		  </RelativePanel>
+	  </SplitView.Pane>
+	  <StackPanel>
+		  <TextBox Text="I'm a Veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery long box."/>
+		  <TextBox Text="I'm a Veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery long box."/>
+		  <TextBox Text="I'm a Veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery long box."/>
+		  <TextBox Text="I'm a Veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery long box."/>
+		  <TextBox Text="I'm a Veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery long box."/>
+		  <TextBox Text="I'm a Veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery long box."/>
+		  <TextBox Text="I'm a Veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery long box."/>
+		  <TextBox Text="I'm a Veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery long box."/>
+		  <TextBox Text="I'm a Veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery long box."/>
+		  <TextBox Text="I'm a Veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery long box."/>
+		  <TextBox Text="I'm a Veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery long box."/>
+		  <TextBox Text="I'm a Veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery long box."/>
+		  <TextBox Text="I'm a Veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery long box."/>
+		  
+	  </StackPanel>
+
+  </SplitView>
+</UserControl>
